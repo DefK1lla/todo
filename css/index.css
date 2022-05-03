@@ -1,0 +1,118 @@
+html,
+body {
+    min-width: 100%;
+    min-height: 100%;
+
+    padding: 0;
+    margin: 0;
+
+    color: #000;
+}
+
+.wrapper {
+    min-width: 100%;
+}
+
+.todo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    padding: 25px;
+}
+
+.todo__list {
+    width: 100%;
+    max-width: 800px;
+    padding: 0;
+
+    list-style: none;
+}
+
+.todo__item {
+    margin: 15px;
+
+    padding: 15px;
+
+    background: rgba(182, 179, 179, 0.2);
+    border-radius: 25px;
+}
+
+.todo__task {
+    padding: 10px 15px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todo__task input:checked+span {
+    text-decoration: line-through;
+}
+
+.todo__delete {
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    position: relative;
+}
+
+.todo__delete::before {
+    content: 'Удалить';
+
+    padding: 5px;
+
+    background: #000;
+    opacity: 0;
+    pointer-events: none;
+
+    color: #fff;
+
+    position: absolute;
+    top: -200%;
+    left: 0;
+}
+
+.todo__delete:hover::before {
+    opacity: 1;
+}
+
+.btn {
+    display: inline-block;
+    padding: 11px 23px;
+
+    border: none;
+    border-radius: 76px;
+    cursor: pointer;
+    background: #2d5be3;
+
+
+    color: #fff;
+    font-size: 15px;
+}
+
+.btn:active {
+    transform: scale(0.99);
+}
+
+.todo__add {
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+.todo__input {
+    width: 100%;
+    max-width: 500px;
+
+    padding: 11px 23px;
+    margin: 15px;
+
+    border-radius: 76px;
+    border: 1px solid #2d5be3;
+}
